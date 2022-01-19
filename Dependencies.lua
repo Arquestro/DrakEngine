@@ -1,0 +1,5 @@
+-- DrakEngine Dependencies
+
+IncludeDir = {}
+
+LibraryDir = {}
