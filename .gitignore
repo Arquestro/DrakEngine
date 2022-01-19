@@ -30,3 +30,22 @@
 *.exe
 *.out
 *.app
+
+# Vendor directories
+vendor/premake/bin
+
+# Mac Files
+.DS_Store
+
+# Premake generated files
+*.pbxproj
+*.plist
+*.xcuserstate
+*.xcworkspacedata
+
+# VS Code
+.vscode
+
+# Compiled
+bin
+bin-int
