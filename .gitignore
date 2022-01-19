@@ -42,6 +42,7 @@ vendor/premake/bin
 *.plist
 *.xcuserstate
 *.xcworkspacedata
+Makefile
 
 # VS Code
 .vscode
