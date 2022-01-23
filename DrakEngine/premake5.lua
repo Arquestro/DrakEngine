@@ -7,6 +7,9 @@ project "DrakEngine"
 	targetdir ("%{wks.location}/bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("%{wks.location}/bin-int/" .. outputdir .. "/%{prj.name}")
 
+    pchheader "dkpch.h"
+    pchsource "src/dkpch.cpp"
+
     files
     {
         "src/**.h",
@@ -15,7 +18,8 @@ project "DrakEngine"
 
     includedirs
     {
-        "src"
+        "src",
+        "vendor/spdlog/include"
     }
 
 	filter "configurations:Debug"
