@@ -14,6 +14,7 @@ project "Sandbox"
 
 	includedirs
 	{
+        "%{wks.location}/DrakEngine/vendor/spdlog/include",
         "%{wks.location}/DrakEngine/src",
         "src"
 	}

@@ -50,3 +50,6 @@ Makefile
 # Compiled
 bin
 bin-int
+
+# Log files
+*.log
