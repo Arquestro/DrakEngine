@@ -22,6 +22,10 @@ project "DrakEngine"
         "vendor/spdlog/include"
     }
 
+    filter "system:macosx"
+        defines { "DRAK_PLATFORM_MACOS" }
+        includedirs { "/opt/homebrew/include/" }
+
 	filter "configurations:Debug"
         defines "DRAK_DEBUG"
         runtime "Debug"

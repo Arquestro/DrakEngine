@@ -19,8 +19,14 @@ project "Sandbox"
         "src"
 	}
 
+	libdirs
+	{
+	    "/opt/homebrew/lib"
+	}
+
     links
     {
+        "glfw",
         "DrakEngine"
     }
 
