@@ -1,5 +1,6 @@
 #pragma once
 
+#include <sstream>
 #include "DrakEngine/Events/Event.h"
 
 namespace DrakEngine {
