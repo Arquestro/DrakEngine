@@ -43,6 +43,8 @@ vendor/premake/bin
 *.xcuserstate
 *.xcworkspacedata
 Makefile
+CMakeLists.txt
+cmake-build-debug
 
 # VS Code
 .vscode
