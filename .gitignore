@@ -45,9 +45,13 @@ vendor/premake/bin
 Makefile
 CMakeLists.txt
 cmake-build-debug
+*.cmake
 
 # VS Code
 .vscode
+
+# Idea files
+.idea
 
 # Compiled
 bin
