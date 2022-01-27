@@ -7,8 +7,8 @@ project "DrakEngine"
 	targetdir ("%{wks.location}/bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("%{wks.location}/bin-int/" .. outputdir .. "/%{prj.name}")
 
-    pchheader "dkpch.h"
-    pchsource "src/dkpch.cpp"
+    pchheader ("%{prj.name}/src/dkpch.h")
+    pchsource ("%{prj.name}/src/dkpch.cpp")
 
     files
     {
