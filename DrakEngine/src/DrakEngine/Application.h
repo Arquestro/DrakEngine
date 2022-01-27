@@ -7,7 +7,7 @@
 namespace DrakEngine {
     class Application {
     public:
-        virtual ~Application() {};
+        virtual ~Application() = default;
 
         void Run();
     private:

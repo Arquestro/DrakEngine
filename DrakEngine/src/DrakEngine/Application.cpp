@@ -1,8 +1,6 @@
 #include "DrakEngine/Core/Window.h"
 #include "DrakEngine/Application.h"
-#include "DrakEngine/Events/MouseEvent.h"
 #include "DrakEngine/Events/ApplicationEvent.h"
-#include "Application.h"
 
 namespace DrakEngine {
     void Application::Run() {
