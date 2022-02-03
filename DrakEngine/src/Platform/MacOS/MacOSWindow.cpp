@@ -33,6 +33,8 @@ namespace DrakEngine {
         }
 
         {
+            // TODO: Vulkan ifdef guard
+            glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
             m_Window = glfwCreateWindow((int) props.Width, (int) props.Height, m_Data.Title.c_str(), nullptr, nullptr);
             ++s_GLFWWindowCount;
         }
@@ -131,12 +133,6 @@ namespace DrakEngine {
     }
 
     void MacOSWindow::SetVSync(bool enabled) {
-        //if (enabled) {
-        //    glfwSwapInterval(1);
-        //} else {
-        //    glfwSwapInterval(0);
-        //}
-
         m_Data.VSync = enabled;
     }
 
