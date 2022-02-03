@@ -30,3 +30,32 @@
 *.exe
 *.out
 *.app
+
+# Vendor directories
+vendor/premake/bin
+
+# Mac Files
+.DS_Store
+
+# Premake generated files
+*.pbxproj
+*.plist
+*.xcuserstate
+*.xcworkspacedata
+Makefile
+CMakeLists.txt
+cmake-build-debug
+*.cmake
+
+# VS Code
+.vscode
+
+# Idea files
+.idea
+
+# Compiled
+bin
+bin-int
+
+# Log files
+*.log
