@@ -133,12 +133,6 @@ namespace DrakEngine {
     }
 
     void MacOSWindow::SetVSync(bool enabled) {
-        //if (enabled) {
-        //    glfwSwapInterval(1);
-        //} else {
-        //    glfwSwapInterval(0);
-        //}
-
         m_Data.VSync = enabled;
     }
 
