@@ -27,8 +27,18 @@ project "Sandbox"
     links
     {
         "glfw",
-        "DrakEngine"
+        "DrakEngine",
+        "ImGui",
+        "Vulkan"
     }
+
+	filter "system:macosx"
+		cppdialect "C++17"
+		staticruntime "On"
+        libdirs
+        {
+            "/usr/local/lib" -- Needed for -lVulkan
+    	}
 
 	filter "configurations:Debug"
         defines "DRAK_DEBUG"

@@ -14,6 +14,7 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 group "Dependencies"
     include "vendor/premake"
+    include "DrakEngine/vendor/imgui"
 group ""
 
 include "DrakEngine"

@@ -19,12 +19,21 @@ project "DrakEngine"
     includedirs
     {
         "src",
-        "vendor/spdlog/include"
+        "vendor/spdlog/include",
+        "%{IncludeDir.ImGui}"
+    }
+
+    links
+    {
+        "ImGui"
     }
 
     filter "system:macosx"
-        defines { "DRAK_PLATFORM_MACOS" }
-        includedirs { "/opt/homebrew/include/" }
+        defines
+        {
+            "DRAK_PLATFORM_MACOS"
+		}
+        includedirs { "/opt/homebrew/include/" } -- Needed for GLFW brew installed headers
 
 	filter "configurations:Debug"
         defines "DRAK_DEBUG"

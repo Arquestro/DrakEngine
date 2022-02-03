@@ -2,3 +2,6 @@
 	path = DrakEngine/vendor/spdlog
 	url = https://github.com/gabime/spdlog
     branch = v1.x
+[submodule "DrakEngine/vendor/imgui/imgui"]
+	path = DrakEngine/vendor/imgui/imgui
+	url = https://github.com/ocornut/imgui
