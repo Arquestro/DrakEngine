@@ -5,7 +5,7 @@
 #include "DrakEngine/Core/Window.h"
 #include "DrakEngine/Core/Layer.h"
 #include "DrakEngine/Core/LayerStack.h"
-#include "DrakEngine/ImGui/ImGuiLayer.h"
+#include "DrakEngine/ImGui/ImGuiLayerVulkan.h"
 
 namespace DrakEngine {
     class Application {
@@ -26,7 +26,7 @@ namespace DrakEngine {
         bool OnWindowResize(WindowResizeEvent& event);
 
         std::unique_ptr<Window> m_Window;
-        ImGuiLayer* m_ImGuiLayer;
+        ImGuiLayerVulkan* m_ImGuiLayer;
         bool m_Running = true;
         bool m_Minimized = false;
         LayerStack m_LayerStack;

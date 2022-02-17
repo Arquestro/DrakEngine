@@ -1,5 +1,3 @@
-#include <utility>
-
 #include "DrakEngine.h"
 #include "DrakEngine/Entrypoint.h"
 

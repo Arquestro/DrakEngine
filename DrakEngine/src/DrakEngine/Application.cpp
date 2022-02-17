@@ -10,7 +10,7 @@ namespace DrakEngine {
         m_Window = Window::Create(WindowProps(name));
         m_Window->SetEventCallback(DRAK_BIND_EVENT_FN(Application::OnEvent));
 
-        m_ImGuiLayer = new ImGuiLayer();
+        m_ImGuiLayer = new ImGuiLayerVulkan();
         PushOverlay(m_ImGuiLayer);
     }
 

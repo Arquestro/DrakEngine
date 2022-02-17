@@ -5,10 +5,10 @@
 #include <GLFW/glfw3.h>
 
 namespace DrakEngine {
-    class MacOSWindow : public Window {
+    class MacOSWindow final : public Window {
     public:
-        MacOSWindow(const WindowProps& props);
-        virtual ~MacOSWindow();
+        explicit MacOSWindow(const WindowProps& props);
+        ~MacOSWindow() override;
 
         void OnUpdate() override;
 
@@ -20,7 +20,7 @@ namespace DrakEngine {
         void SetVSync(bool enabled) override;
         bool IsVSync() const override;
 
-        virtual void* GetNativeWindow() const { return m_Window; }
+        void* GetNativeWindow() const override { return m_Window; }
     private:
         virtual void Init(const WindowProps& props);
         virtual void Shutdown();

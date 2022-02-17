@@ -14,6 +14,7 @@ project "Sandbox"
 
 	includedirs
 	{
+        "%{wks.location}/DrakEngine/vendor/imgui/imgui",
         "%{wks.location}/DrakEngine/vendor/spdlog/include",
         "%{wks.location}/DrakEngine/src",
         "src"
@@ -39,6 +40,7 @@ project "Sandbox"
         {
             "/usr/local/lib" -- Needed for -lVulkan
     	}
+        includedirs { "/opt/homebrew/include/" } -- Needed for GLFW brew installed headers
 
 	filter "configurations:Debug"
         defines "DRAK_DEBUG"
