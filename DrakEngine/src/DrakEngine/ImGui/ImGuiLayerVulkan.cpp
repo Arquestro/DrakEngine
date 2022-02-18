@@ -5,8 +5,6 @@
 #include <imgui.h>
 
 namespace DrakEngine {
-    ImGuiLayerVulkan::ImGuiLayerVulkan() : Layer("ImGuiLayerVulkan") {}
-
     void ImGuiLayerVulkan::SetupVulkan(std::vector<const char*>* instance_extensions, std::vector<const char*>* device_extensions) {
         m_VulkanImGuiRenderer = CreateScope<ImGuiVulkanImplAPI>();
         m_VulkanImGuiRenderer->AddInstanceExtensionNames(instance_extensions);
