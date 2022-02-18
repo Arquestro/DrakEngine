@@ -9,19 +9,21 @@ namespace DrakEngine {
         s_Instance = this;
         m_Window = Window::Create(WindowProps(name));
         m_Window->SetEventCallback(DRAK_BIND_EVENT_FN(Application::OnEvent));
-
-        m_ImGuiLayer = new ImGuiLayerVulkan();
+        m_ImGuiLayer = static_cast<ImGuiLayer*>(new ImGuiLayerVulkan());
         PushOverlay(m_ImGuiLayer);
     }
 
     void Application::Run() {
-        while(m_Running) {
-            if(!m_Minimized) {
-                {
-                    for(Layer* layer : m_LayerStack) {
-                        layer->OnUpdate();
-                    }
+        while (m_Running) {
+            if (!m_Minimized) {
+                for (Layer* layer : m_LayerStack) {
+                    layer->OnUpdate();
                 }
+                m_ImGuiLayer->OnBegin();
+                for (Layer* layer : m_LayerStack) {
+                    layer->OnImGuiLayer();
+                }
+                m_ImGuiLayer->OnEnd();
             }
             m_Window->OnUpdate();
         }
@@ -47,18 +49,15 @@ namespace DrakEngine {
             m_Minimized = true;
             return false;
         }
-
         m_Minimized = false;
         return false;
     }
 
     void Application::PushLayer(Layer *layer) {
         m_LayerStack.PushLayer(layer);
-        layer->OnAttach();
     }
 
     void Application::PushOverlay(Layer *overlay) {
         m_LayerStack.PushOverlay(overlay);
-        overlay->OnAttach();
     }
 }

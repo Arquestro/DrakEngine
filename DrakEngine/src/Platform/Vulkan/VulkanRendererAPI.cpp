@@ -26,7 +26,7 @@ namespace DrakEngine {
     }
 
     void VulkanRendererAPI::SetClearColor(const glm::vec4& color) {
-// TODO: Implement
+        m_ClearColor = color;
     }
 
     void VulkanRendererAPI::Clear() {

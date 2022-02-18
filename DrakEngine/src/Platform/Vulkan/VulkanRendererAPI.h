@@ -41,5 +41,6 @@ namespace DrakEngine {
         VkQueue m_GraphicsQueue;
         std::vector<const char*> m_InstanceExtensions;
         std::vector<const char*> m_DeviceExtensions;
+        glm::vec4 m_ClearColor;
     };
 }

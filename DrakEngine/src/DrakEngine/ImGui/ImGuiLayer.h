@@ -6,9 +6,11 @@ namespace DrakEngine {
     class ImGuiLayer : public Layer {
     public:
         ImGuiLayer() : Layer("ImGuiLayer") {}
-        ImGuiLayer(std::string name) : Layer(name) {}
+        ImGuiLayer(const std::string& name) : Layer(name) {}
         virtual ~ImGuiLayer() = default;
 
+        virtual void OnBegin() = 0;
+        virtual void OnEnd() = 0;
         virtual void BlockEvents(bool block) = 0;
 
         virtual void SetDarkThemeColors() = 0;

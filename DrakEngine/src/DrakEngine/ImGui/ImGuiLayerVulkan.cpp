@@ -64,7 +64,7 @@ namespace DrakEngine {
         }
     }
 
-    void ImGuiLayerVulkan::OnUpdate() {
+    void ImGuiLayerVulkan::OnBegin() {
         // Poll and handle events (inputs, window resize, etc.)
         // You can read the io.WantCaptureMouse, io.WantCaptureKeyboard flags to tell if dear imgui wants to use your inputs.
         // - When io.WantCaptureMouse is true, do not dispatch mouse input data to your main application.
@@ -74,8 +74,9 @@ namespace DrakEngine {
         auto window = static_cast<GLFWwindow*>(Application::Get().GetWindow().GetNativeWindow());
         m_VulkanImGuiRenderer->OnUpdate(window);
         ImGui::NewFrame();
-        static bool show = true;
-        ImGui::ShowDemoWindow(&show);
+    }
+
+    void ImGuiLayerVulkan::OnEnd() {
         // Rendering
         ImGui::Render();
         ImDrawData* draw_data = ImGui::GetDrawData();

@@ -15,7 +15,8 @@ namespace DrakEngine {
         void OnAttach() override;
         void OnDetach() override;
         void OnEvent(Event& event) override;
-        void OnUpdate() override;
+        void OnBegin() override;
+        void OnEnd() override;
 
         void BlockEvents(bool block) { m_BlockEvents = block; }
 

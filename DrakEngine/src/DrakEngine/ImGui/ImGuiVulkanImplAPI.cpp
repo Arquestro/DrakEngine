@@ -282,7 +282,7 @@ namespace DrakEngine {
         if (!is_minimized)
         {
             auto wd = &m_MainWindowData;
-            ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
+            ImVec4 clear_color = ImVec4(m_ClearColor.r, m_ClearColor.g, m_ClearColor.b, m_ClearColor.a);
             wd->ClearValue.color.float32[0] = clear_color.x * clear_color.w;
             wd->ClearValue.color.float32[1] = clear_color.y * clear_color.w;
             wd->ClearValue.color.float32[2] = clear_color.z * clear_color.w;
